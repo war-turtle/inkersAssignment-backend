@@ -1,0 +1,22 @@
+{
+  "name": "inkersassignment-backend",
+  "version": "1.0.0",
+  "description": "backend code for inkers.ai assignment",
+  "main": "app.js",
+  "scripts": {
+    "dev": "NODE_ENV='dev' node app.js",
+    "prod": "NODE_ENV='prod' node app.js"
+  },
+  "author": "war-turtle",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "helmet": "^3.13.0",
+    "mysql": "^2.16.0",
+    "node-cron": "^2.0.3"
+  }
+}
