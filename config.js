@@ -21,7 +21,7 @@ const prod = {
     WEB_TOKEN_SECRET: 'secret',
   },
   db: {
-    host     : 'inkers-assignment-db.caimh8npbxon.ap-south-1.rds.amazonaws.com',
+    host     : 'localhost',
     user     : 'warTurtle',
     password : 'warTurtle',
     database : 'inkers'
