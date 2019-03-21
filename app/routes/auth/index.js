@@ -13,7 +13,7 @@ router.post('/login', (req, res) => {
 
         const data = result[0];
         if (data) {
-            const token = jwt.sign({username: data.username, password: data.password}, config.app.WEB_TOKEN_SECRET);
+            const token = jwt.sign({username: data.username}, config.app.WEB_TOKEN_SECRET);
             res.status(200).json(ResponseTemplate.success('Successfully authenticated', {token}));
         } else {
             res.status(400).json(ResponseTemplate.userNotFound());

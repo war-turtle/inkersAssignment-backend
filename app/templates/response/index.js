@@ -17,22 +17,6 @@ const Response = {
       'no authentication token provided, please login first and provide the authentication token.',
     );
   },
-  emptyContent() {
-    return Response.general({
-      code: 402,
-      message: 'empty content found',
-      description: 'you must provide valid data and it must not be empty.',
-      helpful_links: ['http://stackoverflow.com/questions/18419428/what-is-the-minimum-valid-json'],
-    });
-  },
-  invalidContentType() {
-    return Response.general({
-      code: 400,
-      message: 'invalid content type',
-      description: 'you must specify content type and it must be application/json',
-      helpful_links: ['http://stackoverflow.com/questions/477816/what-is-the-correct-json-content-type'],
-    });
-  },
   routeNotFound() {
     return Response.error(
       404,

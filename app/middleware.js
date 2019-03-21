@@ -5,8 +5,6 @@ import helmet from 'helmet';
 import mysql from 'mysql';
 
 import CsrfMiddleware from './middlewares/csrfMidlleware';
-import EmptyContentMiddleware from './middlewares/EmptyContent';
-import ContentTypeMiddleware from './middlewares/ContentType';
 import config from '../config';
 
 const middleware = (app) => {
@@ -23,8 +21,9 @@ const middleware = (app) => {
   app.use(helmet.xssFilter()); // set X-XSS-Protection header
   app.enable('trust proxy', ['loopback', 'linklocal', 'uniquelocal']);
 
+  const originUrl = (process.env.NODE_ENV === 'dev') ? 'http://localhost:3000' : 'http://localhost:3000';
   app.use(cors({
-    origin: 'http://www.obscuranitkkr.co.in',
+    origin: originUrl,
     credentials: true,
   }));
 
@@ -33,8 +32,6 @@ const middleware = (app) => {
   })); // parse application/x-www-form-urlencoded
   app.use(bodyParser.json()); // parse application/json
 
-  app.use(ContentTypeMiddleware);
-  app.use(EmptyContentMiddleware);
   app.use(CsrfMiddleware);
 
   const db = mysql.createConnection(config.db);
