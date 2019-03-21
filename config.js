@@ -17,7 +17,7 @@ const dev = {
 
 const prod = {
   app: {
-    PORT: 8000,
+    PORT: 80,
     WEB_TOKEN_SECRET: 'secret',
   },
   db: {
