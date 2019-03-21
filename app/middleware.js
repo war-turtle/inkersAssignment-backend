@@ -21,7 +21,7 @@ const middleware = (app) => {
   app.use(helmet.xssFilter()); // set X-XSS-Protection header
   app.enable('trust proxy', ['loopback', 'linklocal', 'uniquelocal']);
 
-  const originUrl = (process.env.NODE_ENV === 'dev') ? 'http://localhost:3000' : 'http://localhost:3000';
+  const originUrl = (process.env.NODE_ENV === 'dev') ? 'http://localhost:3000' : 'https://inkers-frontend.herokuapp.com';
   app.use(cors({
     origin: originUrl,
     credentials: true,
