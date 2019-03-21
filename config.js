@@ -4,7 +4,7 @@ const env = process.env.NODE_ENV; // 'dev' or 'prod'
 
 const dev = {
   app: {
-    PORT: 5000,
+    PORT: 8000,
     WEB_TOKEN_SECRET: 'secret',
   },
   db: {
