@@ -35,7 +35,7 @@ const Response = {
   },
   routeNotFound() {
     return Response.error(
-      405,
+      404,
       'resource not found',
       'the resource your tried to access doesn\'t exist or you dont have permissions to access it.',
     );
@@ -59,6 +59,7 @@ const Response = {
       code: 200,
       message: 'success',
       description: description || 'data successfully saved',
+      data
     };
   },
 };

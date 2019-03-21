@@ -1,7 +1,9 @@
-import login from './routes/auth/login';
+import auth from './routes/auth';
+import notFound from './routes/notFound';
 
 const router = (app) => {
-  app.use(login)
+  app.use('/auth', auth);
+  app.use('*', notFound);
 };
 
 export default router;

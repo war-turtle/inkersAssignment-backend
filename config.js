@@ -5,6 +5,7 @@ const env = process.env.NODE_ENV; // 'dev' or 'prod'
 const dev = {
   app: {
     PORT: 8000,
+    WEB_TOKEN_SECRET: 'secret',
   },
   db: {
     host     : 'localhost',
@@ -17,9 +18,7 @@ const dev = {
 const prod = {
   app: {
     PORT: 8000,
-    SESSION_SECRET: 'secret',
     WEB_TOKEN_SECRET: 'secret',
-    jwt_expiry_time: '12h',
   },
   db: {
     host     : 'localhost',
