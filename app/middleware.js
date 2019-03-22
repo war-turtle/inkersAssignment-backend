@@ -8,8 +8,6 @@ import CsrfMiddleware from './middlewares/csrfMidlleware';
 import config from '../config';
 
 const middleware = (app) => {
-  app.set('port', process.env.PORT || config.app.PORT);
-
   // adding security fixes
   app.disable('x-powered-by');
   app.use(helmet());

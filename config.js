@@ -17,11 +17,11 @@ const dev = {
 
 const prod = {
   app: {
-    PORT: 8000,
+    PORT: 80,
     WEB_TOKEN_SECRET: 'secret',
   },
   db: {
-    host     : 'inkers-assignment-db.cq4umdsl3lje.us-east-1.rds.amazonaws.com',
+    host     : 'localhost',
     user     : 'warTurtle',
     password : 'warTurtle',
     database : 'inkers'
