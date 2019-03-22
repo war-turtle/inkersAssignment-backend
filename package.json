@@ -4,7 +4,7 @@
   "description": "backend code for inkers.ai assignment",
   "main": "app.js",
   "scripts": {
-    "build": "NODE_ENV='prod' node app.js",
+    "build": "pm2 start process.yml --env production",
     "dev": "NODE_ENV='dev' node app.js",
     "prod": "NODE_ENV='prod' node app.js"
   },
